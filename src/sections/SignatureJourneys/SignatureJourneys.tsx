@@ -5,25 +5,25 @@ export default function SignatureJourneys() {
     {
       title: "Dubai",
       description: "Skyline luxury and desert adventures.",
-      image: "/images/journeys/dubai.png",
+      image: "/images/journeys/dubai.jpg",
     },
 
     {
       title: "Bali",
       description: "Paradise, temples and serenity.",
-      image: "/images/journeys/bali.png",
+      image: "/images/journeys/bali.jpg",
     },
 
     {
       title: "Vietnam",
       description: "Lanterns, culture and hidden gems.",
-      image: "/images/journeys/vietnam.png",
+      image: "/images/journeys/vietnam.jpg",
     },
 
     {
       title: "Thailand",
       description: "Island escapes and vibrant nightlife.",
-      image: "/images/journeys/thailand.png",
+      image: "/images/journeys/thailand.jpg",
     },
   ];
 
