@@ -1,14 +1,11 @@
 "use client";
 
 import { FaInstagram } from "react-icons/fa";
+import { FiMessageCircle } from "react-icons/fi";
 
 export default function SocialButton() {
   return (
-    <a
-      href="https://instagram.com/touryantra"
-      target="_blank"
-      rel="noopener noreferrer"
-
+    <div
       className="
       fixed
       bottom-8
@@ -16,45 +13,121 @@ export default function SocialButton() {
       z-50
 
       flex
-      items-center
-      gap-3
-
-      rounded-full
-
-      bg-[#07111F]/85
-
-      px-5
-      py-3
-
-      text-white
-
-      shadow-2xl
-
-      backdrop-blur-lg
-
-      border
-      border-[#D4AF37]/30
-
-      transition-all
-      duration-300
-
-      hover:scale-105
-      hover:border-[#D4AF37]
-      hover:shadow-[0_0_25px_rgba(212,175,55,0.35)]
+      flex-col
+      gap-4
     "
     >
 
-      <FaInstagram
-        size={22}
-        className="text-[#D4AF37]"
-      />
+      {/* Leave a Message */}
 
-      <span className="font-medium">
+      <a
+        href="https://wa.me/918126452480?text=Hi%20TourYantra,%20I%20would%20like%20to%20know%20more%20about%20your%20travel%20experiences."
+        target="_blank"
+        rel="noopener noreferrer"
 
-        Follow Us
+        className="
+        flex
 
-      </span>
+        w-[210px]
 
-    </a>
+        items-center
+        justify-center
+
+        gap-3
+
+        rounded-full
+
+        bg-[#07111F]/85
+
+        px-5
+        py-3
+
+        text-white
+
+        shadow-2xl
+
+        backdrop-blur-lg
+
+        border
+        border-[#D4AF37]/30
+
+        transition-all
+        duration-300
+
+        hover:scale-105
+        hover:border-[#D4AF37]
+        hover:shadow-[0_0_25px_rgba(212,175,55,0.35)]
+      "
+      >
+
+        <FiMessageCircle
+          size={22}
+          className="text-[#D4AF37]"
+        />
+
+        <span className="font-medium">
+
+          Leave a Message
+
+        </span>
+
+      </a>
+
+      {/* Follow Us */}
+
+      <a
+        href="https://instagram.com/touryantra"
+        target="_blank"
+        rel="noopener noreferrer"
+
+        className="
+        flex
+
+        w-[210px]
+
+        items-center
+        justify-center
+
+        gap-3
+
+        rounded-full
+
+        bg-[#07111F]/85
+
+        px-5
+        py-3
+
+        text-white
+
+        shadow-2xl
+
+        backdrop-blur-lg
+
+        border
+        border-[#D4AF37]/30
+
+        transition-all
+        duration-300
+
+        hover:scale-105
+        hover:border-[#D4AF37]
+        hover:shadow-[0_0_25px_rgba(212,175,55,0.35)]
+      "
+      >
+
+        <FaInstagram
+          size={22}
+          className="text-[#D4AF37]"
+        />
+
+        <span className="font-medium">
+
+          Follow Us
+
+        </span>
+
+      </a>
+
+    </div>
   );
 }

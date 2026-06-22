@@ -1,9 +1,11 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
-    <section 
-    id = "home"
-    className="relative flex min-h-screen items-center justify-center overflow-hidden scroll-mt-32">
-
+    <section
+      id="home"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden scroll-mt-32"
+    >
       {/* Background Video */}
 
       <video
@@ -28,13 +30,35 @@ export default function Hero() {
 
       <div className="relative z-10 -mt-10 mx-auto max-w-5xl px-6 text-center text-white">
 
-        <p className="mb-6 text-sm uppercase tracking-[12px] text-[#D4AF37]">
+        {/* Big Logo */}
+
+        <Image
+          src="/logos/logo.jpg"
+          alt="TourYantra Logo"
+          width={180}
+          height={180}
+          priority
+          className="
+          mx-auto
+          mb-6
+          rounded-full
+          border-4
+          border-[#D4AF37]/40
+          shadow-[0_0_40px_rgba(212,175,55,0.25)]
+        "
+        />
+
+        {/* Company Name */}
+
+        <h1 className="mb-4 text-5xl font-extrabold tracking-[6px] text-[#D4AF37] md:text-8xl">
 
           TOURYANTRA
 
-        </p>
+        </h1>
 
-        <h1 className="mb-8 text-5xl font-bold leading-tight md:text-7xl">
+        {/* Tagline */}
+
+        <h2 className="mb-8 text-2xl font-semibold leading-tight text-gray-200 md:text-5xl">
 
           Engineered journeys.
 
@@ -42,7 +66,9 @@ export default function Hero() {
 
           Effortless memories.
 
-        </h1>
+        </h2>
+
+        {/* Description */}
 
         <p className="mx-auto mb-12 max-w-3xl text-lg text-gray-300">
 
@@ -50,7 +76,9 @@ export default function Hero() {
 
         </p>
 
-        <div className="flex items-center justify-center gap-4">
+        {/* Buttons */}
+
+        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
 
           <button className="rounded-full bg-[#D4AF37] px-8 py-3 text-base font-medium text-black transition duration-300 hover:scale-105">
 
@@ -61,6 +89,7 @@ export default function Hero() {
           <a
             href="https://wa.me/918126452480"
             target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full border border-white px-8 py-3 text-base font-medium transition duration-300 hover:border-[#D4AF37] hover:text-[#D4AF37]"
           >
 

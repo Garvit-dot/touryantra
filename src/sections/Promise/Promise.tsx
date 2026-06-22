@@ -8,7 +8,9 @@ export default function Promise() {
       description:
         "Every package is designed by us, never copied from templates.",
 
-      image: "/images/promise/itinerary.png",
+      media: "/images/promise/itinerary.png",
+
+      type: "image",
     },
 
     {
@@ -17,7 +19,9 @@ export default function Promise() {
       description:
         "Carefully selected hotels and experiences for every journey.",
 
-      image: "/images/promise/stays.png",
+      media: "/images/promise/stays.mp4",
+
+      type: "video",
     },
 
     {
@@ -26,7 +30,9 @@ export default function Promise() {
       description:
         "We take care of the details so you can simply enjoy.",
 
-      image: "/images/promise/planning.png",
+      media: "/images/promise/planning.png",
+
+      type: "image",
     },
 
     {
@@ -35,7 +41,9 @@ export default function Promise() {
       description:
         "From booking to returning home, we're with you.",
 
-      image: "/images/promise/support.png",
+      media: "/images/promise/support.mp4",
+
+      type: "video",
     },
 
     {
@@ -44,25 +52,41 @@ export default function Promise() {
       description:
         "Experiences built to be remembered for years to come.",
 
-      image: "/images/promise/memories.png",
+      media: "/images/promise/memories.mp4",
+
+      type: "video",
     },
   ];
 
   return (
     <section
-    id = "promise"
-    className="relative overflow-hidden px-8 py-28 text-white scroll-mt-32">
+      id="promise"
+
+      className="
+      relative
+
+      overflow-hidden
+
+      px-8
+      py-28
+
+      text-white
+
+      scroll-mt-32
+    "
+    >
 
       {/* Background Image */}
 
       <div
         className="absolute inset-0 bg-cover bg-center"
+
         style={{
           backgroundImage: "url('/images/promise-bg.jpg')",
         }}
       />
 
-      {/* Dark Overlay */}
+      {/* Overlay */}
 
       <div className="absolute inset-0 bg-[#07111F]/90" />
 
@@ -88,8 +112,7 @@ export default function Promise() {
 
           <p className="mx-auto max-w-3xl text-lg text-gray-300">
 
-            Every journey is thoughtfully engineered so you can focus on
-            creating memories instead of planning logistics.
+            Every journey is thoughtfully engineered so you can focus on creating memories instead of planning logistics.
 
           </p>
 
@@ -103,23 +126,89 @@ export default function Promise() {
 
             <div
               key={item.title}
-              className="group rounded-[36px] bg-white p-5 transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
+
+              className="
+              group
+
+              rounded-[36px]
+
+              bg-white
+
+              p-5
+
+              transition
+              duration-300
+
+              hover:-translate-y-2
+              hover:shadow-2xl
+            "
             >
 
-              {/* Image */}
+              {/* Media */}
 
-              <div className="relative h-[340px] overflow-hidden rounded-[28px]">
+              <div
+                className="
+                relative
 
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover transition duration-700 group-hover:scale-110"
-                />
+                h-[340px]
+
+                overflow-hidden
+
+                rounded-[28px]
+              "
+              >
+
+                {item.type === "image" ? (
+
+                  <Image
+                    src={item.media}
+                    alt={item.title}
+
+                    fill
+
+                    className="
+                    object-cover
+
+                    transition
+                    duration-700
+
+                    group-hover:scale-110
+                  "
+                  />
+
+                ) : (
+
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+
+                    className="
+                    h-full
+                    w-full
+
+                    object-cover
+
+                    transition
+                    duration-700
+
+                    group-hover:scale-110
+                  "
+                  >
+
+                    <source
+                      src={item.media}
+                      type="video/mp4"
+                    />
+
+                  </video>
+
+                )}
 
               </div>
 
-              {/* Content */}
+              {/* Text */}
 
               <div className="pt-8 text-black">
 

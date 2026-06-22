@@ -1,3 +1,7 @@
+import Reviews from "@/sections/Reviews/Reviews";
+
+import AboutUs from "@/sections/AboutUs/AboutUs";
+
 import SocialButton from "@/components/SocialButton/SocialButton";
 
 import Navbar from "@/components/Navbar/Navbar";
@@ -10,7 +14,6 @@ import Promise from "@/sections/Promise/Promise";
 
 import SignatureJourneys from "@/sections/SignatureJourneys/SignatureJourneys";
 
-import FeaturedEscapes from "@/sections/FeaturedEscapes/FeaturedEscapes";
 
 import HowItWorks from "@/sections/HowItWorks/HowItWorks";
 
@@ -22,16 +25,17 @@ export default function Home() {
 
       <Hero />
 
+      <AboutUs />
+
       <Promise />
 
       <SignatureJourneys />
 
-      <FeaturedEscapes />
+      <Reviews />
 
       <HowItWorks />
 
       <Footer />
-      
 
       <SocialButton />
 

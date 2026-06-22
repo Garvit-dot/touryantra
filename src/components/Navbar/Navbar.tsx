@@ -1,45 +1,49 @@
 "use client";
-import Image from "next/image";
 
 export default function Navbar() {
   const navItems = [
-    {
-      label: "Home",
-      href: "home",
-    },
+  {
+    label: "Home",
+    href: "home",
+  },
 
-    {
-      label: "Promise",
-      href: "promise",
-    },
+  {
+    label: "About Us",
+    href: "about-us",
+  },
 
-    {
-      label: "Journeys",
-      href: "journeys",
-    },
+  {
+    label: "Promise",
+    href: "promise",
+  },
 
-    {
-      label: "Experiences",
-      href: "experiences",
-    },
+  {
+    label: "Journeys",
+    href: "journeys",
+  },
 
-    {
-      label: "How It Works",
-      href: "how-it-works",
-    },
+  {
+    label: "Reviews",
+    href: "reviews",
+  },
 
-    {
-      label: "Contact",
-      href: "contact",
-    },
-  ];
+  {
+    label: "How It Works",
+    href: "how-it-works",
+  },
+
+  {
+    label: "Contact",
+    href: "contact",
+  },
+];
 
   return (
     <nav className="fixed left-1/2 top-5 z-50 w-[90%] max-w-6xl -translate-x-1/2">
 
       <div className="flex h-20 items-center justify-between rounded-full border border-[#D4AF37]/20 bg-black/45 px-8 backdrop-blur-xl">
 
-        {/* Logo */}
+        {/* Brand Name */}
 
         <button
           onClick={() => {
@@ -48,22 +52,10 @@ export default function Navbar() {
             });
           }}
 
-          className="flex items-center gap-4"
+          className="text-2xl font-bold tracking-wide text-white transition duration-300 hover:text-[#D4AF37]"
         >
 
-          <Image
-            src="/logos/logo.jpg"
-            alt="TourYantra"
-            width={42}
-            height={42}
-            className="rounded-full"
-          />
-
-          <h1 className="text-2xl font-bold text-white">
-
-            TourYantra
-
-          </h1>
+          TourYantra
 
         </button>
 
