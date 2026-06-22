@@ -28,7 +28,7 @@ export default function Hero() {
 
       {/* Content */}
 
-      <div className="relative z-10 -mt-10 mx-auto max-w-5xl px-6 text-center text-white">
+      <div className="relative z-10 mt-24 mx-auto max-w-5xl px-6 text-center text-white">
 
         {/* Big Logo */}
 
