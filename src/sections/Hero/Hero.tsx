@@ -33,18 +33,16 @@ export default function Hero() {
         {/* Big Logo */}
 
         <Image
-          src="/logos/logo.jpg"
+          src="/logos/logo-transparent.png"
           alt="TourYantra Logo"
-          width={180}
-          height={180}
+          width={220}
+          height={220}
           priority
           className="
           mx-auto
           mb-6
-          rounded-full
-          border-4
-          border-[#D4AF37]/40
-          shadow-[0_0_40px_rgba(212,175,55,0.25)]
+          drop-shadow-[0_0_30px_rgba(212,175,55,0.35)]
+          
         "
         />
 

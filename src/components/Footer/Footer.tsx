@@ -7,27 +7,67 @@ import {
   Phone,
   MapPin,
 } from "lucide-react";
+
 export default function Footer() {
   return (
     <footer
-    id="contact"
-    className="relative overflow-hidden border-t border-[#D4AF37]/30 bg-[#111111] px-8 py-24 text-white scroll-mt-32">
+      id="contact"
 
-      {/* Gold glow */}
+      className="
+      relative
 
-      <div className="absolute left-1/2 top-0 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-[#D4AF37]/10 blur-[120px]" />
+      overflow-hidden
+
+      border-t
+      border-[#D4AF37]/30
+
+      bg-[#111111]
+
+      px-8
+      py-24
+
+      text-white
+
+      scroll-mt-32
+    "
+    >
+
+      {/* Gold Glow */}
+
+      <div
+        className="
+        absolute
+
+        left-1/2
+        top-0
+
+        h-[300px]
+        w-[300px]
+
+        -translate-x-1/2
+
+        rounded-full
+
+        bg-[#D4AF37]/10
+
+        blur-[120px]
+      "
+      />
 
       <div className="relative z-10 mx-auto max-w-7xl">
 
         {/* Logo */}
 
-        <div className="mb-12 flex flex-col items-center">
+        <div className="mb-16 flex flex-col items-center">
 
           <Image
             src="/logos/logo.jpg"
+
             alt="TourYantra"
+
             width={90}
             height={90}
+
             className="mb-6 rounded-full"
           />
 
@@ -45,102 +85,217 @@ export default function Footer() {
 
         </div>
 
-        {/* Contact Details */}
+        {/* Contact Cards */}
 
-        <div className="mx-auto flex max-w-3xl flex-col gap-6">
+        <div
+          className="
+          mx-auto
+
+          grid
+
+          max-w-6xl
+
+          gap-8
+
+          md:grid-cols-4
+        "
+        >
 
           {/* Instagram */}
 
-          <div className="flex items-center gap-4">
+          <a
+            href="https://instagram.com/touryantra"
+
+            target="_blank"
+
+            rel="noopener noreferrer"
+
+            className="
+            rounded-3xl
+
+            border
+            border-[#D4AF37]/20
+
+            bg-white/5
+
+            p-8
+
+            text-center
+
+            backdrop-blur-lg
+
+            transition-all
+            duration-300
+
+            hover:-translate-y-1
+            hover:border-[#D4AF37]/40
+          "
+          >
 
             <FaInstagram
-                size={22}
-                className="text-[#D4AF37]"
+              size={28}
+
+              className="mx-auto mb-4 text-[#D4AF37]"
             />
 
-            <a
-              href="https://instagram.com/touryantra"
-              target="_blank"
-              className="text-gray-300 transition hover:text-white"
-            >
+            <h3 className="mb-3 text-xl font-semibold">
+
+              Instagram
+
+            </h3>
+
+            <p className="text-gray-300">
 
               @touryantra
 
-            </a>
+            </p>
 
-          </div>
+          </a>
 
           {/* Email */}
 
-          <div className="flex items-center gap-4">
+          <a
+            href="mailto:info@touryantra.com"
+
+            className="
+            rounded-3xl
+
+            border
+            border-[#D4AF37]/20
+
+            bg-white/5
+
+            p-8
+
+            text-center
+
+            backdrop-blur-lg
+
+            transition-all
+            duration-300
+
+            hover:-translate-y-1
+            hover:border-[#D4AF37]/40
+          "
+          >
 
             <Mail
-              size={24}
-              className="text-[#D4AF37]"
+              size={28}
+
+              className="mx-auto mb-4 text-[#D4AF37]"
             />
 
-            <a
-              href="mailto:info@touryantra.com"
-              className="text-gray-300 transition hover:text-white"
-            >
+            <h3 className="mb-3 text-xl font-semibold">
+
+              Email
+
+            </h3>
+
+            <p className="text-gray-300 break-all">
 
               info@touryantra.com
 
-            </a>
+            </p>
 
-          </div>
+          </a>
 
           {/* Phone */}
 
-          <div className="flex items-center gap-4">
+          <a
+            href="https://wa.me/918126452480"
+
+            target="_blank"
+
+            rel="noopener noreferrer"
+
+            className="
+            rounded-3xl
+
+            border
+            border-[#D4AF37]/20
+
+            bg-white/5
+
+            p-8
+
+            text-center
+
+            backdrop-blur-lg
+
+            transition-all
+            duration-300
+
+            hover:-translate-y-1
+            hover:border-[#D4AF37]/40
+          "
+          >
 
             <Phone
-              size={24}
-              className="text-[#D4AF37]"
+              size={28}
+
+              className="mx-auto mb-4 text-[#D4AF37]"
             />
 
-            <a
-              href="https://wa.me/918126452480"
-              target="_blank"
-              className="text-gray-300 transition hover:text-white"
-            >
+            <h3 className="mb-3 text-xl font-semibold">
+
+              Phone
+
+            </h3>
+
+            <p className="text-gray-300">
 
               +91 81264 52480
 
-            </a>
+            </p>
 
-          </div>
+          </a>
 
           {/* Address */}
 
-          <div className="flex items-start gap-4">
+          <div
+            className="
+            rounded-3xl
+
+            border
+            border-[#D4AF37]/20
+
+            bg-white/5
+
+            p-8
+
+            text-center
+
+            backdrop-blur-lg
+
+            transition-all
+            duration-300
+
+            hover:-translate-y-1
+            hover:border-[#D4AF37]/40
+          "
+          >
 
             <MapPin
-              size={24}
-              className="mt-1 text-[#D4AF37]"
+              size={28}
+
+              className="mx-auto mb-4 text-[#D4AF37]"
             />
 
-            <div className="text-gray-300">
+            <h3 className="mb-3 text-xl font-semibold">
 
-              <p>
+              Address
 
-                H-139, Malik Colony
+            </h3>
 
-              </p>
+            <p className="text-gray-300">
 
-              <p>
+              H-139 Malik Colony, Near Gurudwara,
 
-                near Gurudwara, Adarsh Colony
+              <br />
 
-              </p>
+              Adarsh colony, Rudrapur, Uttarakhand, India
 
-              <p>
-
-                Rudrapur, Uttarakhand, India
-
-              </p>
-
-            </div>
+            </p>
 
           </div>
 

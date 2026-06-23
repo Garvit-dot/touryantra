@@ -58,6 +58,116 @@ export default function Promise() {
     },
   ];
 
+  const renderCard = (item: any) => (
+    <div
+      key={item.title}
+
+      className="
+      group
+
+      w-full
+      max-w-[360px]
+
+      rounded-[36px]
+
+      bg-white
+
+      p-5
+
+      transition
+      duration-300
+
+      hover:-translate-y-2
+      hover:shadow-2xl
+    "
+    >
+
+      {/* Media */}
+
+      <div
+        className="
+        relative
+
+        h-[340px]
+
+        overflow-hidden
+
+        rounded-[28px]
+      "
+      >
+
+        {item.type === "image" ? (
+
+          <Image
+            src={item.media}
+
+            alt={item.title}
+
+            fill
+
+            className="
+            object-cover
+
+            transition
+            duration-700
+
+            group-hover:scale-110
+          "
+          />
+
+        ) : (
+
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+
+            className="
+            h-full
+            w-full
+
+            object-cover
+
+            transition
+            duration-700
+
+            group-hover:scale-110
+          "
+          >
+
+            <source
+              src={item.media}
+              type="video/mp4"
+            />
+
+          </video>
+
+        )}
+
+      </div>
+
+      {/* Text */}
+
+      <div className="pt-8 text-black">
+
+        <h3 className="mb-4 text-3xl font-semibold">
+
+          {item.title}
+
+        </h3>
+
+        <p className="text-gray-600">
+
+          {item.description}
+
+        </p>
+
+      </div>
+
+    </div>
+  );
+
   return (
     <section
       id="promise"
@@ -76,7 +186,7 @@ export default function Promise() {
     "
     >
 
-      {/* Background Image */}
+      {/* Background */}
 
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -118,117 +228,19 @@ export default function Promise() {
 
         </div>
 
-        {/* Cards */}
+        {/* Top Row */}
 
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mb-10 grid gap-10 md:grid-cols-3">
 
-          {promises.map((item) => (
+          {promises.slice(0, 3).map(renderCard)}
 
-            <div
-              key={item.title}
+        </div>
 
-              className="
-              group
+        {/* Bottom Row */}
 
-              rounded-[36px]
+        <div className="flex flex-wrap justify-center gap-14">
 
-              bg-white
-
-              p-5
-
-              transition
-              duration-300
-
-              hover:-translate-y-2
-              hover:shadow-2xl
-            "
-            >
-
-              {/* Media */}
-
-              <div
-                className="
-                relative
-
-                h-[340px]
-
-                overflow-hidden
-
-                rounded-[28px]
-              "
-              >
-
-                {item.type === "image" ? (
-
-                  <Image
-                    src={item.media}
-                    alt={item.title}
-
-                    fill
-
-                    className="
-                    object-cover
-
-                    transition
-                    duration-700
-
-                    group-hover:scale-110
-                  "
-                  />
-
-                ) : (
-
-                  <video
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-
-                    className="
-                    h-full
-                    w-full
-
-                    object-cover
-
-                    transition
-                    duration-700
-
-                    group-hover:scale-110
-                  "
-                  >
-
-                    <source
-                      src={item.media}
-                      type="video/mp4"
-                    />
-
-                  </video>
-
-                )}
-
-              </div>
-
-              {/* Text */}
-
-              <div className="pt-8 text-black">
-
-                <h3 className="mb-4 text-3xl font-semibold">
-
-                  {item.title}
-
-                </h3>
-
-                <p className="text-gray-600">
-
-                  {item.description}
-
-                </p>
-
-              </div>
-
-            </div>
-
-          ))}
+          {promises.slice(3).map(renderCard)}
 
         </div>
 

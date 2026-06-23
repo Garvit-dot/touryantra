@@ -14,7 +14,7 @@ export default function Reviews() {
     },
 
     {
-      name: "Vasu",
+      name: "Aneeka Singh",
 
       media: "/reviews/review2.mp4",
 
@@ -25,7 +25,7 @@ export default function Reviews() {
     },
 
     {
-      name: "Daniel John",
+      name: "Ajit Jain",
 
       media: "/reviews/review3.jpg",
 
@@ -49,12 +49,23 @@ export default function Reviews() {
     {
       name: "Siddharth Sharma",
 
-      media: "/reviews/review5.mp4",
+      media: "/reviews/review6.mp4",
 
       review:
         "Every little detail was thoughtfully planned and executed perfectly.",
 
       type: "video",
+    },
+
+    {
+      name: "Priya Mehta",
+
+      media: "/reviews/review7.jpg",
+
+      review:
+        "An incredibly well-organized journey with beautiful experiences and zero stress throughout the trip.",
+
+      type: "image",
     },
   ];
 
@@ -155,6 +166,8 @@ export default function Reviews() {
 
                   <video
                     controls
+
+                    muted={item.name === "Siddharth Sharma"}
 
                     className="h-full w-full object-cover"
                   >
