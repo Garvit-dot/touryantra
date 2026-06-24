@@ -8,7 +8,7 @@ export default function SignatureJourneys() {
       description:
         "Skyline luxury and desert adventures.",
 
-      media: "/images/journeys/dubai.mp4",
+      media: "/images/journeys/bali1.mp4",
 
       type: "video",
     },
@@ -30,9 +30,9 @@ export default function SignatureJourneys() {
       description:
         "Lanterns, culture and hidden gems.",
 
-      media: "/images/journeys/vietnam.jpg",
+      media: "/images/journeys/vietnam1.mp4",
 
-      type: "image",
+      type: "video",
     },
 
     {

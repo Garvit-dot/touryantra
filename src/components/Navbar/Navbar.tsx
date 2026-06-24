@@ -8,32 +8,32 @@ export default function Navbar() {
   },
 
   {
-    label: "About Us",
+    label: "Our Story",
     href: "about-us",
   },
 
   {
-    label: "Promise",
+    label: "Our Promise",
     href: "promise",
   },
 
   {
-    label: "Journeys",
+    label: "Experiences",
     href: "journeys",
   },
 
   {
-    label: "Reviews",
+    label: "Traveller Stories",
     href: "reviews",
   },
 
   {
-    label: "How It Works",
+    label: "Begin Your Journey",
     href: "how-it-works",
   },
 
   {
-    label: "Contact",
+    label: "Let's Connect",
     href: "contact",
   },
 ];

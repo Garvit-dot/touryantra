@@ -8,7 +8,7 @@ export default function Promise() {
       description:
         "Every package is designed by us, never copied from templates.",
 
-      media: "/images/promise/itinerary.png",
+      media: "/images/promise/planning1.png",
 
       type: "image",
     },
@@ -30,7 +30,7 @@ export default function Promise() {
       description:
         "We take care of the details so you can simply enjoy.",
 
-      media: "/images/promise/planning.png",
+      media: "/images/promise/planning2.png",
 
       type: "image",
     },
