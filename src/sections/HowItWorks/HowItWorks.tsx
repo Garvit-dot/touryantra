@@ -61,7 +61,7 @@ export default function HowItWorks() {
 
           <p className="mb-4 text-sm uppercase tracking-[8px] text-[#D4AF37]">
 
-            HOW IT WORKS
+            BEGIN YOUR JOURNEY
 
           </p>
 

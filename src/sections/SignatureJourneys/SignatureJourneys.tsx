@@ -96,9 +96,7 @@ export default function SignatureJourneys() {
         <div className="mb-20 text-center">
 
           <p className="mb-4 text-sm uppercase tracking-[8px] text-[#D4AF37]">
-
-            SIGNATURE JOURNEYS
-
+            EXPERIENCES
           </p>
 
           <h2 className="mb-6 text-4xl font-bold md:text-5xl">
