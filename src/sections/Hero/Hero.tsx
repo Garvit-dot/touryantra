@@ -58,11 +58,7 @@ export default function Hero() {
 
         <h2 className="mb-8 text-2xl font-semibold leading-tight text-gray-200 md:text-5xl">
 
-          Engineered journeys.
-
-          <br />
-
-          Effortless memories.
+          Where Every Journey Becomes a Story.
 
         </h2>
 
