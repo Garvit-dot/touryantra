@@ -15,7 +15,7 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/videos/hero.mp4" type="video/mp4" />
+        <source src="/videos/hero1.mp4" type="video/mp4" />
       </video>
 
       {/* Dark Overlay */}
@@ -33,7 +33,7 @@ export default function Hero() {
         {/* Big Logo */}
 
         <Image
-          src="/logos/logo-transparent.png"
+          src="/logos/logo-transparent2.png"
           alt="TourYantra Logo"
           width={220}
           height={220}
