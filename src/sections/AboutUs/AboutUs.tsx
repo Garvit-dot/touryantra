@@ -95,12 +95,11 @@ export default function AboutUs() {
             ABOUT TOURYANTRA
 
           </p>
+          <h3 className="mb-8 text-3xl font-bold text-white md:text-4xl">
 
-          <h2 className="mb-6 text-4xl font-bold text-white md:text-5xl">
+            Mission Statement
 
-            Experiences crafted with purpose.
-
-          </h2>
+          </h3>
 
           <p className="mx-auto max-w-4xl text-lg leading-relaxed text-gray-300">
 
@@ -125,8 +124,19 @@ export default function AboutUs() {
         </div>
 
         {/* Values */}
-
         <div className="mb-24">
+        <div className="mb-14 text-center">
+          <p className="mb-2 text-sm uppercase tracking-[6px] text-[#D4AF37]">
+
+            WHAT WE STAND FOR
+
+          </p>
+          <h3 className="text-3xl font-bold text-white md:text-4xl">
+
+            Our Core Values
+
+          </h3>
+          </div>
 
           {/* Mobile + Tablet */}
 
