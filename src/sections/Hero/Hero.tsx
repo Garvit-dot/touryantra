@@ -8,11 +8,13 @@ export default function Hero() {
     >
       {/* Background Video */}
 
-      <video
+     <video
         autoPlay
         muted
         loop
         playsInline
+        preload="auto"
+        poster="/images/hero-poster.png"
         className="absolute inset-0 h-full w-full object-cover"
       >
         <source src="/videos/hero1.mp4" type="video/mp4" />
