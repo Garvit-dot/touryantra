@@ -52,10 +52,15 @@ export default function AboutUs() {
           muted
           loop
           playsInline
+          preload="auto"
+          poster="/images/aboutbgbg.jpg"
           className="h-full w-full object-cover"
         >
 
-          <source src="/images/about-bg1.mp4" type="video/mp4" />
+          <source
+            src="/images/about-bg1.mp4"
+            type="video/mp4"
+          />
 
         </video>
 
@@ -64,7 +69,6 @@ export default function AboutUs() {
         <div className="absolute inset-0 bg-[#07111F]/78" />
 
       </div>
-
       {/* Golden Glow */}
 
       <div

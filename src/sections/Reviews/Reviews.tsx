@@ -5,7 +5,7 @@ export default function Reviews() {
     {
       name: "Arun Mittal",
 
-      media: "/reviews/review1.jpg",
+      media: "/reviews/review1_.jpg",
 
       review:
         "An unforgettable experience planned with exceptional attention to detail.",
@@ -27,7 +27,7 @@ export default function Reviews() {
     {
       name: "Ajit Jain",
 
-      media: "/reviews/review3.jpg",
+      media: "/reviews/review3_.jpg",
 
       review:
         "Professional, reliable and extremely easy to work with.",
@@ -38,7 +38,7 @@ export default function Reviews() {
     {
       name: "Riya Verma",
 
-      media: "/reviews/review4.jpg",
+      media: "/reviews/review4_.jpg",
 
       review:
         "One of the smoothest international trips we have ever had.",
@@ -60,7 +60,7 @@ export default function Reviews() {
     {
       name: "Priya Mehta",
 
-      media: "/reviews/review7.jpg",
+      media: "/reviews/review7_.jpg",
 
       review:
         "An incredibly well-organized journey with beautiful experiences and zero stress throughout the trip.",
