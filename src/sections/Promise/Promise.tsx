@@ -4,56 +4,41 @@ export default function Promise() {
   const promises = [
     {
       title: "Handcrafted Itineraries",
-
       description:
         "Every package is designed by us, never copied from templates.",
-
       media: "/images/promise/planning1.png",
-
       type: "image",
     },
 
     {
       title: "Curated Stays",
-
       description:
         "Carefully selected hotels and experiences for every journey.",
-
       media: "/images/promise/stays.mp4",
-
       type: "video",
     },
 
     {
       title: "Hassle-Free Planning",
-
       description:
         "We take care of the details so you can simply enjoy.",
-
       media: "/images/promise/planning2.png",
-
       type: "image",
     },
 
     {
       title: "End-to-End Support",
-
       description:
         "From booking to returning home, we're with you.",
-
       media: "/images/promise/support.mp4",
-
       type: "video",
     },
 
     {
       title: "Memories That Last",
-
       description:
         "Experiences built to be remembered for years to come.",
-
       media: "/images/promise/memories.mp4",
-
       type: "video",
     },
   ];
@@ -61,18 +46,19 @@ export default function Promise() {
   const renderCard = (item: any) => (
     <div
       key={item.title}
-
       className="
       group
 
       w-full
       max-w-[360px]
 
-      rounded-[36px]
+      rounded-[30px]
+      md:rounded-[36px]
 
       bg-white
 
-      p-5
+      p-4
+      md:p-5
 
       transition
       duration-300
@@ -88,11 +74,14 @@ export default function Promise() {
         className="
         relative
 
-        h-[340px]
+        h-[250px]
+        sm:h-[300px]
+        md:h-[340px]
 
         overflow-hidden
 
-        rounded-[28px]
+        rounded-[24px]
+        md:rounded-[28px]
       "
       >
 
@@ -100,11 +89,8 @@ export default function Promise() {
 
           <Image
             src={item.media}
-
             alt={item.title}
-
             fill
-
             className="
             object-cover
 
@@ -122,11 +108,9 @@ export default function Promise() {
             muted
             loop
             playsInline
-
             className="
             h-full
             w-full
-
             object-cover
 
             transition
@@ -149,15 +133,15 @@ export default function Promise() {
 
       {/* Text */}
 
-      <div className="pt-8 text-black">
+      <div className="pt-6 md:pt-8 text-black">
 
-        <h3 className="mb-4 text-3xl font-semibold">
+        <h3 className="mb-3 md:mb-4 text-2xl md:text-3xl font-semibold">
 
           {item.title}
 
         </h3>
 
-        <p className="text-gray-600">
+        <p className="text-sm md:text-base text-gray-600 leading-relaxed">
 
           {item.description}
 
@@ -169,68 +153,77 @@ export default function Promise() {
   );
 
   return (
-    <section
-      id="promise"
+  <section
+    id="promise"
+    className="
+    relative
+    overflow-hidden
+    px-5
+    md:px-8
+    py-20
+    md:py-28
+    text-white
+    scroll-mt-32
+  "
+  >
 
-      className="
-      relative
+    {/* Background */}
 
-      overflow-hidden
+    <div
+      className="absolute inset-0 bg-cover bg-center"
+      style={{
+        backgroundImage: "url('/images/promise-bg.jpg')",
+      }}
+    />
 
-      px-8
-      py-28
+    {/* Overlay */}
 
-      text-white
+    <div className="absolute inset-0 bg-[#07111F]/90" />
 
-      scroll-mt-32
-    "
-    >
+    {/* Content */}
 
-      {/* Background */}
+    <div className="relative z-10 mx-auto max-w-7xl">
 
-      <div
-        className="absolute inset-0 bg-cover bg-center"
+      {/* Heading */}
 
-        style={{
-          backgroundImage: "url('/images/promise-bg.jpg')",
-        }}
-      />
+      <div className="mb-14 md:mb-20 text-center">
 
-      {/* Overlay */}
+        <p className="mb-4 text-xs md:text-sm uppercase tracking-[6px] md:tracking-[8px] text-[#D4AF37]">
 
-      <div className="absolute inset-0 bg-[#07111F]/90" />
+          THE TOURYANTRA PROMISE
 
-      {/* Content */}
+        </p>
 
-      <div className="relative z-10 mx-auto max-w-7xl">
+        <h2 className="mb-5 md:mb-6 text-3xl md:text-5xl font-bold">
 
-        {/* Heading */}
+          Travel Without The Stress
 
-        <div className="mb-20 text-center">
+        </h2>
 
-          <p className="mb-4 text-sm uppercase tracking-[8px] text-[#D4AF37]">
+        <p className="mx-auto max-w-3xl text-base md:text-lg leading-relaxed text-gray-300">
 
-            THE TOURYANTRA PROMISE
+          Every journey is thoughtfully engineered so you can focus on
+          creating memories instead of planning logistics.
 
-          </p>
+        </p>
 
-          <h2 className="mb-6 text-4xl font-bold md:text-5xl">
+      </div>
 
-            Travel Without The Stress
+      {/* Mobile */}
 
-          </h2>
+      <div className="flex flex-col items-center gap-8 lg:hidden">
 
-          <p className="mx-auto max-w-3xl text-lg text-gray-300">
+        {promises.map(renderCard)}
 
-            Every journey is thoughtfully engineered so you can focus on creating memories instead of planning logistics.
+      </div>
 
-          </p>
+      {/* Desktop */}
 
-        </div>
+      <div className="hidden lg:block">
 
         {/* Top Row */}
 
-        <div className="mb-10 grid gap-10 md:grid-cols-3">
+        <div className="mb-10 grid grid-cols-3 gap-10">
 
           {promises.slice(0, 3).map(renderCard)}
 
@@ -238,7 +231,7 @@ export default function Promise() {
 
         {/* Bottom Row */}
 
-        <div className="flex flex-wrap justify-center gap-14">
+        <div className="flex justify-center gap-14">
 
           {promises.slice(3).map(renderCard)}
 
@@ -246,6 +239,8 @@ export default function Promise() {
 
       </div>
 
-    </section>
-  );
+    </div>
+
+  </section>
+);
 }

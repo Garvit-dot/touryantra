@@ -4,67 +4,49 @@ export default function Reviews() {
   const reviews = [
     {
       name: "Arun Mittal",
-
       media: "/reviews/review1_.jpg",
-
       review:
         "An unforgettable experience planned with exceptional attention to detail.",
-
       type: "image",
     },
 
     {
       name: "Aneeka Singh",
-
       media: "/reviews/review2.mp4",
-
       review:
         "Everything was seamless from start to finish. We only had to enjoy ourselves.",
-
       type: "video",
     },
 
     {
       name: "Ajit Jain",
-
       media: "/reviews/review3_.jpg",
-
       review:
         "Professional, reliable and extremely easy to work with.",
-
       type: "image",
     },
 
     {
       name: "Riya Verma",
-
       media: "/reviews/review4_.jpg",
-
       review:
         "One of the smoothest international trips we have ever had.",
-
       type: "image",
     },
 
     {
       name: "Siddharth Sharma",
-
       media: "/reviews/review6.mp4",
-
       review:
         "Every little detail was thoughtfully planned and executed perfectly.",
-
       type: "video",
     },
 
     {
       name: "Priya Mehta",
-
       media: "/reviews/review7_.jpg",
-
       review:
         "An incredibly well-organized journey with beautiful experiences and zero stress throughout the trip.",
-
       type: "image",
     },
   ];
@@ -72,7 +54,7 @@ export default function Reviews() {
   return (
     <section
       id="reviews"
-      className="relative overflow-hidden py-28"
+      className="relative overflow-hidden py-20 md:py-28"
     >
 
       {/* Background */}
@@ -84,7 +66,6 @@ export default function Reviews() {
           alt="Reviews Background"
           fill
           priority
-
           className="object-cover scale-105"
         />
 
@@ -92,25 +73,25 @@ export default function Reviews() {
 
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 md:px-6">
 
         {/* Heading */}
 
-        <div className="mb-20 text-center">
+        <div className="mb-14 md:mb-20 text-center">
 
-          <p className="mb-4 text-sm uppercase tracking-[8px] text-[#D4AF37]">
+          <p className="mb-4 text-xs md:text-sm uppercase tracking-[6px] md:tracking-[8px] text-[#D4AF37]">
 
             TRAVELLER STORIES
 
           </p>
 
-          <h2 className="mb-6 text-4xl font-bold text-white md:text-5xl">
+          <h2 className="mb-5 md:mb-6 text-3xl md:text-5xl font-bold text-white">
 
             Hear it from our travellers
 
           </h2>
 
-          <p className="mx-auto max-w-3xl text-lg text-gray-300">
+          <p className="mx-auto max-w-3xl text-base md:text-lg leading-relaxed text-gray-300">
 
             Every journey tells a story. Here are a few memories created with TourYantra.
 
@@ -120,17 +101,17 @@ export default function Reviews() {
 
         {/* Cards */}
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
 
           {reviews.map((item) => (
 
             <div
               key={item.name}
-
               className="
               overflow-hidden
 
-              rounded-3xl
+              rounded-[28px]
+              md:rounded-3xl
 
               border
               border-[#D4AF37]/20
@@ -150,7 +131,7 @@ export default function Reviews() {
 
               {/* Media */}
 
-              <div className="relative h-[300px]">
+              <div className="relative h-[240px] sm:h-[280px] md:h-[300px]">
 
                 {item.type === "image" ? (
 
@@ -158,7 +139,6 @@ export default function Reviews() {
                     src={item.media}
                     alt={item.name}
                     fill
-
                     className="object-cover"
                   />
 
@@ -166,9 +146,7 @@ export default function Reviews() {
 
                   <video
                     controls
-
                     muted={item.name === "Siddharth Sharma"}
-
                     className="h-full w-full object-cover"
                   >
 
@@ -185,21 +163,21 @@ export default function Reviews() {
 
               {/* Content */}
 
-              <div className="p-8">
+              <div className="p-6 md:p-8">
 
-                <div className="mb-4 text-[#D4AF37]">
+                <div className="mb-3 md:mb-4 text-[#D4AF37] text-lg">
 
                   ★★★★★
 
                 </div>
 
-                <p className="mb-6 text-gray-300">
+                <p className="mb-5 md:mb-6 text-sm md:text-base leading-relaxed text-gray-300">
 
                   "{item.review}"
 
                 </p>
 
-                <h3 className="font-semibold text-white">
+                <h3 className="text-base md:text-lg font-semibold text-white">
 
                   {item.name}
 

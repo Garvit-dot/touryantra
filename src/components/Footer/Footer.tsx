@@ -12,10 +12,8 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-
       className="
       relative
-
       overflow-hidden
 
       border-t
@@ -23,8 +21,11 @@ export default function Footer() {
 
       bg-[#111111]
 
-      px-8
-      py-24
+      px-5
+      md:px-8
+
+      py-20
+      md:py-24
 
       text-white
 
@@ -37,12 +38,14 @@ export default function Footer() {
       <div
         className="
         absolute
-
         left-1/2
         top-0
 
-        h-[300px]
-        w-[300px]
+        h-[220px]
+        w-[220px]
+
+        md:h-[300px]
+        md:w-[300px]
 
         -translate-x-1/2
 
@@ -50,7 +53,8 @@ export default function Footer() {
 
         bg-[#D4AF37]/10
 
-        blur-[120px]
+        blur-[90px]
+        md:blur-[120px]
       "
       />
 
@@ -58,26 +62,23 @@ export default function Footer() {
 
         {/* Logo */}
 
-        <div className="mb-16 flex flex-col items-center">
+        <div className="mb-14 md:mb-16 flex flex-col items-center">
 
           <Image
             src="/logos/logo.jpg"
-
             alt="TourYantra"
-
             width={90}
             height={90}
-
-            className="mb-6 rounded-full"
+            className="mb-5 md:mb-6 w-20 md:w-[90px] rounded-full"
           />
 
-          <h2 className="mb-4 text-5xl font-bold">
+          <h2 className="mb-3 md:mb-4 text-4xl md:text-5xl font-bold">
 
             TourYantra
 
           </h2>
 
-          <p className="text-center text-lg text-gray-400">
+          <p className="text-center text-base md:text-lg text-gray-400">
 
             Engineered journeys. Effortless memories.
 
@@ -95,226 +96,231 @@ export default function Footer() {
 
           max-w-6xl
 
-          gap-8
+          gap-6
+          md:gap-8
 
-          md:grid-cols-4
+          md:grid-cols-2
+          xl:grid-cols-4
         "
         >
-
           {/* Instagram */}
 
-          <a
-            href="https://instagram.com/touryantra"
+<a
+  href="https://instagram.com/touryantra"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+  rounded-3xl
 
-            target="_blank"
+  border
+  border-[#D4AF37]/20
 
-            rel="noopener noreferrer"
+  bg-white/5
 
-            className="
-            rounded-3xl
+  p-6
+  md:p-8
 
-            border
-            border-[#D4AF37]/20
+  text-center
 
-            bg-white/5
+  backdrop-blur-lg
 
-            p-8
+  transition-all
+  duration-300
 
-            text-center
+  hover:-translate-y-1
+  hover:border-[#D4AF37]/40
+"
+>
 
-            backdrop-blur-lg
+  <FaInstagram
+    size={28}
+    className="mx-auto mb-4 text-[#D4AF37]"
+  />
 
-            transition-all
-            duration-300
+  <h3 className="mb-3 text-lg md:text-xl font-semibold">
 
-            hover:-translate-y-1
-            hover:border-[#D4AF37]/40
-          "
-          >
+    Instagram
 
-            <FaInstagram
-              size={28}
+  </h3>
 
-              className="mx-auto mb-4 text-[#D4AF37]"
-            />
+  <p className="text-sm md:text-base text-gray-300">
 
-            <h3 className="mb-3 text-xl font-semibold">
+    @touryantra
 
-              Instagram
+  </p>
 
-            </h3>
+</a>
 
-            <p className="text-gray-300">
+{/* Email */}
 
-              @touryantra
+<a
+  href="mailto:info@touryantra.com"
+  className="
+  rounded-3xl
 
-            </p>
+  border
+  border-[#D4AF37]/20
 
-          </a>
+  bg-white/5
 
-          {/* Email */}
+  p-6
+  md:p-8
 
-          <a
-            href="mailto:info@touryantra.com"
+  text-center
 
-            className="
-            rounded-3xl
+  backdrop-blur-lg
 
-            border
-            border-[#D4AF37]/20
+  transition-all
+  duration-300
 
-            bg-white/5
+  hover:-translate-y-1
+  hover:border-[#D4AF37]/40
+"
+>
 
-            p-8
+  <Mail
+    size={28}
+    className="mx-auto mb-4 text-[#D4AF37]"
+  />
 
-            text-center
+  <h3 className="mb-3 text-lg md:text-xl font-semibold">
 
-            backdrop-blur-lg
+    Email
 
-            transition-all
-            duration-300
+  </h3>
 
-            hover:-translate-y-1
-            hover:border-[#D4AF37]/40
-          "
-          >
+  <p className="break-all text-sm md:text-base text-gray-300">
 
-            <Mail
-              size={28}
+    info@touryantra.com
 
-              className="mx-auto mb-4 text-[#D4AF37]"
-            />
+  </p>
 
-            <h3 className="mb-3 text-xl font-semibold">
+</a>
+{/* Phone */}
 
-              Email
+<a
+  href="https://wa.me/918126452480"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+  rounded-3xl
 
-            </h3>
+  border
+  border-[#D4AF37]/20
 
-            <p className="text-gray-300 break-all">
+  bg-white/5
 
-              info@touryantra.com
+  p-6
+  md:p-8
 
-            </p>
+  text-center
 
-          </a>
+  backdrop-blur-lg
 
-          {/* Phone */}
+  transition-all
+  duration-300
 
-          <a
-            href="https://wa.me/918126452480"
+  hover:-translate-y-1
+  hover:border-[#D4AF37]/40
+"
+>
 
-            target="_blank"
+  <Phone
+    size={28}
+    className="mx-auto mb-4 text-[#D4AF37]"
+  />
 
-            rel="noopener noreferrer"
+  <h3 className="mb-3 text-lg md:text-xl font-semibold">
 
-            className="
-            rounded-3xl
+    Phone
 
-            border
-            border-[#D4AF37]/20
+  </h3>
 
-            bg-white/5
+  <p className="text-sm md:text-base text-gray-300">
 
-            p-8
+    +91 81264 52480
 
-            text-center
+  </p>
 
-            backdrop-blur-lg
+</a>
 
-            transition-all
-            duration-300
+{/* Address */}
 
-            hover:-translate-y-1
-            hover:border-[#D4AF37]/40
-          "
-          >
+<div
+  className="
+  rounded-3xl
 
-            <Phone
-              size={28}
+  border
+  border-[#D4AF37]/20
 
-              className="mx-auto mb-4 text-[#D4AF37]"
-            />
+  bg-white/5
 
-            <h3 className="mb-3 text-xl font-semibold">
+  p-6
+  md:p-8
 
-              Phone
+  text-center
 
-            </h3>
+  backdrop-blur-lg
 
-            <p className="text-gray-300">
+  transition-all
+  duration-300
 
-              +91 81264 52480
+  hover:-translate-y-1
+  hover:border-[#D4AF37]/40
+"
+>
 
-            </p>
+  <MapPin
+    size={28}
+    className="mx-auto mb-4 text-[#D4AF37]"
+  />
 
-          </a>
+  <h3 className="mb-3 text-lg md:text-xl font-semibold">
 
-          {/* Address */}
+    Address
 
-          <div
-            className="
-            rounded-3xl
+  </h3>
 
-            border
-            border-[#D4AF37]/20
+  <p className="text-sm md:text-base leading-relaxed text-gray-300">
 
-            bg-white/5
+    H-139 Malik Colony,
 
-            p-8
+    <br />
 
-            text-center
+    Near Gurudwara,
 
-            backdrop-blur-lg
+    <br />
 
-            transition-all
-            duration-300
+    Adarsh Colony,
 
-            hover:-translate-y-1
-            hover:border-[#D4AF37]/40
-          "
-          >
+    <br />
 
-            <MapPin
-              size={28}
+    Rudrapur, Uttarakhand,
 
-              className="mx-auto mb-4 text-[#D4AF37]"
-            />
+    <br />
 
-            <h3 className="mb-3 text-xl font-semibold">
+    India
 
-              Address
+  </p>
 
-            </h3>
+</div>
 
-            <p className="text-gray-300">
+</div>
 
-              H-139 Malik Colony, Near Gurudwara,
+{/* Divider */}
 
-              <br />
+<div className="my-10 md:my-12 h-px bg-white/10" />
 
-              Adarsh colony, Rudrapur, Uttarakhand, India
+{/* Copyright */}
 
-            </p>
+<div className="text-center text-xs md:text-sm text-gray-500">
 
-          </div>
+  © 2026 TourYantra. All rights reserved.
 
-        </div>
+</div>
 
-        {/* Divider */}
+</div>
 
-        <div className="my-12 h-px bg-white/10" />
-
-        {/* Copyright */}
-
-        <div className="text-center text-sm text-gray-500">
-
-          © 2026 TourYantra. All rights reserved.
-
-        </div>
-
-      </div>
-
-    </footer>
+</footer>
   );
 }

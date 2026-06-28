@@ -8,17 +8,22 @@ export default function SocialButton() {
     <div
       className="
       fixed
-      bottom-8
-      right-8
+      bottom-5
+      right-5
+      md:bottom-8
+      md:right-8
+
       z-50
 
       flex
       flex-col
-      gap-4
+
+      gap-3
+      md:gap-4
     "
     >
 
-      {/* Leave a Message */}
+      {/* WhatsApp */}
 
       <a
         href="https://wa.me/918126452480?text=Hi%20TourYantra,%20I%20would%20like%20to%20know%20more%20about%20your%20travel%20experiences."
@@ -28,7 +33,11 @@ export default function SocialButton() {
         className="
         flex
 
-        w-[210px]
+        h-14
+        w-14
+
+        md:h-auto
+        md:w-[210px]
 
         items-center
         justify-center
@@ -39,12 +48,12 @@ export default function SocialButton() {
 
         bg-[#07111F]/85
 
-        px-5
-        py-3
+        md:px-5
+        md:py-3
 
         text-white
 
-        shadow-2xl
+        shadow-lg
 
         backdrop-blur-lg
 
@@ -65,7 +74,7 @@ export default function SocialButton() {
           className="text-[#D4AF37]"
         />
 
-        <span className="font-medium">
+        <span className="hidden md:block font-medium">
 
           Leave a Message
 
@@ -73,7 +82,7 @@ export default function SocialButton() {
 
       </a>
 
-      {/* Follow Us */}
+      {/* Instagram */}
 
       <a
         href="https://instagram.com/touryantra"
@@ -83,7 +92,11 @@ export default function SocialButton() {
         className="
         flex
 
-        w-[210px]
+        h-14
+        w-14
+
+        md:h-auto
+        md:w-[210px]
 
         items-center
         justify-center
@@ -94,12 +107,12 @@ export default function SocialButton() {
 
         bg-[#07111F]/85
 
-        px-5
-        py-3
+        md:px-5
+        md:py-3
 
         text-white
 
-        shadow-2xl
+        shadow-lg
 
         backdrop-blur-lg
 
@@ -120,7 +133,7 @@ export default function SocialButton() {
           className="text-[#D4AF37]"
         />
 
-        <span className="font-medium">
+        <span className="hidden md:block font-medium">
 
           Follow Us
 

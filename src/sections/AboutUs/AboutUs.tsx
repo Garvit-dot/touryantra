@@ -39,11 +39,10 @@ export default function AboutUs() {
   return (
     <section
       id="about-us"
-      className="relative overflow-hidden py-28"
+      className="relative overflow-hidden py-20 md:py-28"
     >
-      {/* Background */}
 
-      {/* Background Video */}
+      {/* Background */}
 
       <div className="absolute inset-0 overflow-hidden">
 
@@ -64,11 +63,10 @@ export default function AboutUs() {
 
         </video>
 
-        {/* Dark Overlay */}
-
         <div className="absolute inset-0 bg-[#07111F]/78" />
 
       </div>
+
       {/* Golden Glow */}
 
       <div
@@ -76,36 +74,38 @@ export default function AboutUs() {
         absolute
         left-1/2
         top-1/2
-        h-[400px]
-        w-[400px]
+        h-[250px]
+        w-[250px]
+        md:h-[400px]
+        md:w-[400px]
         -translate-x-1/2
         -translate-y-1/2
         rounded-full
         bg-[#D4AF37]/5
-        blur-[120px]
+        blur-[80px]
+        md:blur-[120px]
       "
       />
 
-      {/* Content */}
-
-      <div className="relative z-10 mx-auto max-w-6xl px-6">
+      <div className="relative z-10 mx-auto max-w-6xl px-5 md:px-6">
 
         {/* Heading */}
 
-        <div className="mb-20 text-center">
+        <div className="mb-16 md:mb-20 text-center">
 
-          <p className="mb-4 text-sm uppercase tracking-[8px] text-[#D4AF37]">
+          <p className="mb-4 text-xs md:text-sm uppercase tracking-[6px] md:tracking-[8px] text-[#D4AF37]">
 
             ABOUT TOURYANTRA
 
           </p>
-          <h3 className="mb-8 text-3xl font-bold text-white md:text-4xl">
+
+          <h3 className="mb-6 md:mb-8 text-2xl md:text-4xl font-bold text-white">
 
             Mission Statement
 
           </h3>
 
-          <p className="mx-auto max-w-4xl text-lg leading-relaxed text-gray-300">
+          <p className="mx-auto max-w-4xl text-base md:text-lg leading-relaxed text-gray-300">
 
             TourYantra exists to make travel more meaningful, accessible,
             and deeply personal. We believe that exploring the world should
@@ -116,7 +116,7 @@ export default function AboutUs() {
 
           </p>
 
-          <p className="mx-auto mt-5 max-w-4xl text-lg leading-relaxed text-gray-300">
+          <p className="mx-auto mt-5 max-w-4xl text-base md:text-lg leading-relaxed text-gray-300">
 
             Our mission is to design thoughtfully curated travel experiences
             that combine quality, affordability, and emotional value, so every
@@ -128,23 +128,28 @@ export default function AboutUs() {
         </div>
 
         {/* Values */}
-        <div className="mb-24">
-        <div className="mb-14 text-center">
-          <p className="mb-2 text-sm uppercase tracking-[6px] text-[#D4AF37]">
 
-            WHAT WE STAND FOR
+        <div className="mb-20 md:mb-24">
 
-          </p>
-          <h3 className="text-3xl font-bold text-white md:text-4xl">
+          <div className="mb-12 md:mb-14 text-center">
 
-            Our Core Values
+            <p className="mb-2 text-xs md:text-sm uppercase tracking-[5px] md:tracking-[6px] text-[#D4AF37]">
 
-          </h3>
+              WHAT WE STAND FOR
+
+            </p>
+
+            <h3 className="text-2xl md:text-4xl font-bold text-white">
+
+              Our Core Values
+
+            </h3>
+
           </div>
 
           {/* Mobile + Tablet */}
 
-          <div className="grid gap-8 md:grid-cols-2 xl:hidden">
+          <div className="grid gap-6 md:grid-cols-2 xl:hidden">
 
             {values.map((item) => (
 
@@ -152,23 +157,15 @@ export default function AboutUs() {
                 key={item.title}
                 className="
                 relative
-
                 rounded-3xl
-
                 border
                 border-[#D4AF37]/20
-
                 bg-white/5
-
-                p-10
-
+                p-8 md:p-10
                 text-center
-
                 backdrop-blur-lg
-
                 transition-all
                 duration-300
-
                 hover:-translate-y-2
                 hover:border-[#D4AF37]/40
               "
@@ -177,16 +174,11 @@ export default function AboutUs() {
                 <div
                   className="
                   absolute
-
-                  left-8
-                  top-6
-
-                  text-5xl
-
+                  left-6
+                  top-5
+                  text-4xl md:text-5xl
                   font-bold
-
                   text-[#D4AF37]/20
-
                   select-none
                 "
                 >
@@ -195,15 +187,15 @@ export default function AboutUs() {
 
                 </div>
 
-                <div className="pt-12">
+                <div className="pt-10 md:pt-12">
 
-                  <h3 className="mb-5 text-2xl font-semibold text-white">
+                  <h3 className="mb-4 md:mb-5 text-xl md:text-2xl font-semibold text-white">
 
                     {item.title}
 
                   </h3>
 
-                  <p className="leading-relaxed text-gray-300">
+                  <p className="text-sm md:text-base leading-relaxed text-gray-300">
 
                     {item.description}
 
@@ -219,281 +211,268 @@ export default function AboutUs() {
 
           {/* Desktop Olympic Rings */}
 
-          <div className="hidden xl:block">
+          {/* Desktop Olympic Rings */}
 
-            {/* Top Row */}
+<div className="hidden xl:block">
 
-            <div className="mb-10 grid grid-cols-3 gap-10">
+  {/* Top Row */}
 
-              {values.slice(0, 3).map((item) => (
+  <div className="mb-10 grid grid-cols-3 gap-10">
 
-                <div
-                  key={item.title}
-                  className="
-                  relative
+    {values.slice(0, 3).map((item) => (
 
-                  rounded-3xl
-
-                  border
-                  border-[#D4AF37]/20
-
-                  bg-white/5
-
-                  p-10
-
-                  text-center
-
-                  backdrop-blur-lg
-
-                  transition-all
-                  duration-300
-
-                  hover:-translate-y-2
-                  hover:border-[#D4AF37]/40
-                "
-                >
-
-                  <div
-                    className="
-                    absolute
-
-                    left-8
-                    top-6
-
-                    text-5xl
-
-                    font-extrabold
-
-                    text-[#D4AF37]
-                    opacity-60
-                    select-none
-                  "
-                  >
-
-                    {item.number}
-
-                  </div>
-
-                  <div className="pt-12">
-
-                    <h3 className="mb-5 text-2xl font-semibold text-white">
-
-                      {item.title}
-
-                    </h3>
-
-                    <p className="leading-relaxed text-gray-300">
-
-                      {item.description}
-
-                    </p>
-
-                  </div>
-
-                </div>
-
-              ))}
-
-            </div>
-
-            {/* Bottom Row */}
-
-            <div className="mx-auto grid max-w-4xl grid-cols-2 gap-10">
-
-              {values.slice(3).map((item) => (
-
-                <div
-                  key={item.title}
-                  className="
-                  relative
-
-                  rounded-3xl
-
-                  border
-                  border-[#D4AF37]/20
-
-                  bg-white/5
-
-                  p-10
-
-                  text-center
-
-                  backdrop-blur-lg
-
-                  transition-all
-                  duration-300
-
-                  hover:-translate-y-2
-                  hover:border-[#D4AF37]/40
-                "
-                >
-
-                  <div
-                    className="
-                    absolute
-
-                    left-8
-                    top-6
-
-                    text-5xl
-
-                    font-extrabold
-
-                    text-[#D4AF37]
-                    opacity-60
-                    select-none
-                  "
-                  >
-
-                    {item.number}
-
-                  </div>
-
-                  <div className="pt-12">
-
-                    <h3 className="mb-5 text-2xl font-semibold text-white">
-
-                      {item.title}
-
-                    </h3>
-
-                    <p className="leading-relaxed text-gray-300">
-
-                      {item.description}
-
-                    </p>
-
-                  </div>
-
-                </div>
-
-              ))}
-
-            </div>
-
-          </div>
-
-        </div>
-
-        {/* Experience */}
+      <div
+        key={item.title}
+        className="
+        relative
+        rounded-3xl
+        border
+        border-[#D4AF37]/20
+        bg-white/5
+        p-10
+        text-center
+        backdrop-blur-lg
+        transition-all
+        duration-300
+        hover:-translate-y-2
+        hover:border-[#D4AF37]/40
+      "
+      >
 
         <div
           className="
-          mb-16
-
-          rounded-3xl
-
-          border
-          border-[#D4AF37]/20
-
-          bg-white/5
-
-          p-12
-
-          text-center
-
-          backdrop-blur-lg
-
-          transition-all
-          duration-300
-
-          hover:border-[#D4AF37]/40
+          absolute
+          left-8
+          top-6
+          text-5xl
+          font-extrabold
+          text-[#D4AF37]
+          opacity-60
+          select-none
         "
         >
 
-          <h3 className="mb-2 text-6xl font-bold text-[#D4AF37]">
-
-            5+
-
-          </h3>
-
-          <h4 className="mb-8 text-3xl font-semibold text-white">
-
-            Years of Experience
-
-          </h4>
-
-          <div className="mx-auto max-w-4xl space-y-5 text-lg leading-relaxed text-gray-300">
-
-            <p>
-
-              For over five years, TourYantra has been thoughtfully crafting
-              journeys that go beyond traditional travel. Our experience has
-              been built on understanding people—their need to pause,
-              reconnect, celebrate milestones, and create meaningful memories
-              with those who matter most.
-
-            </p>
-
-            <p>
-
-              Every itinerary is designed with care, balancing affordability,
-              comfort, and authenticity to ensure each traveller experiences
-              destinations in a more personal and fulfilling way. From solo
-              escapes and family getaways to special celebrations and
-              once-in-a-lifetime adventures, we focus on creating seamless
-              experiences that leave a lasting emotional impact long after
-              the journey ends.
-
-            </p>
-
-            <p>
-
-              With a strong commitment to trust, quality, and human-centered
-              travel, we continue to transform ordinary trips into purposeful
-              experiences that enrich everyday life.
-
-            </p>
-
-          </div>
+          {item.number}
 
         </div>
 
-        {/* Review */}
+        <div className="pt-12">
 
-        <div>
+          <h3 className="mb-5 text-2xl font-semibold text-white">
 
-          <div
-            className="
-            rounded-3xl
+            {item.title}
 
-            border
-            border-[#D4AF37]/20
+          </h3>
 
-            bg-white/5
+          <p className="leading-relaxed text-gray-300">
 
-            p-10
+            {item.description}
 
-            text-center
-
-            backdrop-blur-lg
-          "
-          >
-
-            <div className="mb-4 text-2xl text-[#D4AF37]">
-
-              ★★★★★
-
-            </div>
-
-            <p className="mb-4 text-lg italic text-gray-300">
-
-              "A seamless Bali experience from start to finish."
-
-            </p>
-
-            <p className="text-sm text-gray-400">
-
-              - TourYantra Traveller
-
-            </p>
-
-          </div>
+          </p>
 
         </div>
 
       </div>
 
+    ))}
+
+  </div>
+
+  {/* Bottom Row */}
+
+  <div className="mx-auto grid max-w-4xl grid-cols-2 gap-10">
+
+    {values.slice(3).map((item) => (
+
+      <div
+        key={item.title}
+        className="
+        relative
+        rounded-3xl
+        border
+        border-[#D4AF37]/20
+        bg-white/5
+        p-10
+        text-center
+        backdrop-blur-lg
+        transition-all
+        duration-300
+        hover:-translate-y-2
+        hover:border-[#D4AF37]/40
+      "
+      >
+
+        <div
+          className="
+          absolute
+          left-8
+          top-6
+          text-5xl
+          font-extrabold
+          text-[#D4AF37]
+          opacity-60
+          select-none
+        "
+        >
+
+          {item.number}
+
+        </div>
+
+        <div className="pt-12">
+
+          <h3 className="mb-5 text-2xl font-semibold text-white">
+
+            {item.title}
+
+          </h3>
+
+          <p className="leading-relaxed text-gray-300">
+
+            {item.description}
+
+          </p>
+
+        </div>
+
+      </div>
+
+    ))}
+
+  </div>
+
+</div>
+
+</div>
+
+{/* Experience */}
+
+<div
+  className="
+  mb-14
+  md:mb-16
+
+  rounded-3xl
+
+  border
+  border-[#D4AF37]/20
+
+  bg-white/5
+
+  p-8
+  md:p-12
+
+  text-center
+
+  backdrop-blur-lg
+
+  transition-all
+  duration-300
+
+  hover:border-[#D4AF37]/40
+"
+>
+
+  <h3 className="mb-2 text-5xl md:text-6xl font-bold text-[#D4AF37]">
+
+    5+
+
+  </h3>
+
+  <h4 className="mb-6 md:mb-8 text-2xl md:text-3xl font-semibold text-white">
+
+    Years of Experience
+
+  </h4>
+
+  <div className="mx-auto max-w-4xl space-y-5 text-base md:text-lg leading-relaxed text-gray-300">
+
+    <p>
+
+      For over five years, TourYantra has been thoughtfully crafting
+      journeys that go beyond traditional travel. Our experience has
+      been built on understanding people—their need to pause,
+      reconnect, celebrate milestones, and create meaningful memories
+      with those who matter most.
+
+    </p>
+
+    <p>
+
+      Every itinerary is designed with care, balancing affordability,
+      comfort, and authenticity to ensure each traveller experiences
+      destinations in a more personal and fulfilling way. From solo
+      escapes and family getaways to special celebrations and
+      once-in-a-lifetime adventures, we focus on creating seamless
+      experiences that leave a lasting emotional impact long after
+      the journey ends.
+
+    </p>
+
+    <p>
+
+      With a strong commitment to trust, quality, and human-centered
+      travel, we continue to transform ordinary trips into purposeful
+      experiences that enrich everyday life.
+
+    </p>
+
+  </div>
+
+</div>
+
+        {/* Review */}
+
+<div>
+
+  <div
+    className="
+    rounded-3xl
+
+    border
+    border-[#D4AF37]/20
+
+    bg-white/5
+
+    p-8
+    md:p-10
+
+    text-center
+
+    backdrop-blur-lg
+
+    transition-all
+    duration-300
+
+    hover:border-[#D4AF37]/40
+  "
+  >
+
+    <div className="mb-4 text-xl md:text-2xl text-[#D4AF37]">
+
+      ★★★★★
+
+    </div>
+
+    <p className="mx-auto mb-4 max-w-3xl text-base md:text-lg italic leading-relaxed text-gray-300">
+
+      "A seamless Bali experience from start to finish. Every detail was thoughtfully planned, making our journey completely stress-free and unforgettable."
+
+    </p>
+
+    <p className="text-sm text-gray-400">
+
+      — TourYantra Traveller
+
+    </p>
+
+  </div>
+
+</div>
+
+      </div>
+
     </section>
+
   );
 }
